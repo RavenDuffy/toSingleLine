@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>String to JSON</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    #conversion-zone {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    textarea {
+      background-color: #f0f7ff;
+      border: 1px solid #d0d7df;
+      overflow: auto;
+      outline: none;
+    }
+    #after-text {
+      height: 1.75rem;
+      background-color: #fff7f0;
+      border: 1px solid #dfd7d0;
+      border-radius: 5px;
+      white-space: nowrap;
+      width: 100%;
+    }
+    #output {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+    }
+    #convert {
+      margin-right: 5px;
+    }
+    #convert {
+      height: 2rem;
+      text-align: center;
+      font-size: 1.1rem;
+      border: none;
+      outline: none;
+      border-radius: 5px;
+      background-color: #c0c7c0;
+    }
+    #convert:hover {
+      background-color: #77ff88;
+      transition: 0.2s;
+    }
+    #convert:active {
+      transition: 0.1s;
+      background-color: #7788ff;
+    }
+  </style>
+</head>
+<body>
+  <div id="conversion-zone">
+    <textarea id="before-text" rows="25" cols="80"></textarea>
+    <div id="output">
+      <button type="button" id="convert">Convert</button>
+      <input id="after-text" type="text"></input>
+    </div>
+  </div>
+</body>
+<footer>
+  <script src="ConvertString.js"></script>
+</footer>
+</html>
