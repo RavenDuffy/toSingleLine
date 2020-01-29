@@ -1,7 +1,7 @@
 document.getElementById("convert").onclick = () => {
   let beforeText = document.getElementById("before-text").value;
   let finalText = beforeText.replace("\n", "\\n")
-                            .replace("\t", "\\t")
+                            .replace(/\t/g, "\\t")
                             .replace(/    /g, "\\t")
                             .replace(/"/g, "'");
 
