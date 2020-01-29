@@ -3,8 +3,7 @@ document.getElementById("convert").onclick = () => {
   let finalText = beforeText.replace("\n", "\\n")
                             .replace(/\t/g, "\\t")
                             .replace(/    /g, "\\t")
-                            .replace(/\u00a0/g, "\\t")
                             .replace(/"/g, "'");
 
-  document.getElementById("after-text").value = finalText.split("\n").join("\\n");
+  document.getElementById("after-text").value = finalText.split("\n").join("\\n").split("\t").join("\\t");
 }
